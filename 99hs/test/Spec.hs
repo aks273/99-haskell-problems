@@ -8,13 +8,7 @@ main = do
     -- These tests currently work when loading q1.hs or q2.hs into ghci and running
     -- `quickCheck` from there.
 
-    -- However, these tests don't work when running `stack test`, with the following
-
-    -- These tests currently work if we remove the equality class constraint
-    -- from the `prop_testName` tests, and replace the generic type `a` with one
-    -- that we know satisfies that class constraint, e.g. Int
-
-    -- we get the following error if we leave the equality class constraint in:
+    -- However, these tests don't work when running `stack test`, with the following error:
 
     --     /Users/akhilshah/Documents/haskell/99-haskell-problems/99hs/test/Spec.hs:9:5: error:
     --     • Ambiguous type variable ‘a1’ arising from a use of ‘quickCheck’
@@ -42,6 +36,11 @@ main = do
     --                  putStrLn "tests done!"
     --   |
     -- 9 |     quickCheck prop_myButLast
+
+
+    -- They do however work when we remove the `Eq a` constraint and change `a` to
+    -- a type that already satisfies this constraint, e.g. and Int. I'm not sure why
+    -- atm.
 
     quickCheck prop_myLast
     quickCheck prop_myButLast
