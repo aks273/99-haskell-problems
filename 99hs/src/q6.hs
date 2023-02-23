@@ -1,6 +1,7 @@
 module Q6(isPalindrome) where
 
 import Test.QuickCheck
+import Q1(myLast)
 
 isPalindrome :: Eq a => [a] -> Bool
 isPalindrome [] = True
