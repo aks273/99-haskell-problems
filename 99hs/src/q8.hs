@@ -1,7 +1,5 @@
 module Q8(myCompress) where
 
-import Test.QuickCheck
-
 myCompress :: Eq a => [a] -> [a]
 myCompress [] = []
 myCompress [x] = [x]

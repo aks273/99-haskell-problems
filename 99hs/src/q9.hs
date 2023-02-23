@@ -1,7 +1,5 @@
 module Q9(myPack) where
 
-import Test.QuickCheck
-
 myPack :: Eq a => [a] -> [[a]]
 myPack [] = []
 myPack [x] = [[x]]

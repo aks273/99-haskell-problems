@@ -2,7 +2,6 @@ module Q10_13(
     lengthEncode, lengthEncodeModified, lengthDecodeModified, lengthEncodeDirect, prop_lengthEncode
     ) where
 
-import Test.QuickCheck
 import Q9(myPack)
 
 lengthEncode :: Eq a => [a] -> [(Int, a)]
