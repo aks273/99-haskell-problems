@@ -1,8 +1,6 @@
-module Q20(
-removeAt) where
+module Q20(removeAt) where
 
 import Test.QuickCheck
-
 
 removeAt :: [a] -> Int -> (a, [a])
 removeAt xs index
