@@ -1,4 +1,4 @@
-module Q1 (prop_myLast) where
+module Q1 (myLast, prop_myLast) where
 
 import Test.QuickCheck
 
