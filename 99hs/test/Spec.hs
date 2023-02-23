@@ -2,6 +2,7 @@ import Test.QuickCheck
 
 import Q1 (prop_myLast)
 import Q2 (prop_myButLast)
+import Q10_13(prop_lengthEncode)
 
 main :: IO ()
 main = do
@@ -14,5 +15,8 @@ main = do
 
     quickCheck (prop_myButLast :: [Int] -> Property)
     quickCheck (prop_myButLast :: String -> Property)
+
+    quickCheck (prop_lengthEncode :: [Int] -> Bool)
+    quickCheck (prop_lengthEncode :: String -> Bool)
 
     putStrLn "tests done!"
