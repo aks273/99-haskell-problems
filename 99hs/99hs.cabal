@@ -48,6 +48,8 @@ library
       Q24
       Q25
       Q26
+      Q27
+      Q28
   other-modules:
       Paths_99hs
   hs-source-dirs:
