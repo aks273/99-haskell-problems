@@ -13,7 +13,7 @@ rndSelect xs n
     | n == 0        = []
     | otherwise     =
         let (index, _)  = (randomR (0, (length xs) - 1) (mkStdGen n))
-            elem        = xs !! index
+            el          = xs !! index
         in [ el ] ++ (filter (\x -> x /= el) xs) `rndSelect` (n - 1)
 
 prop_rndSelect :: Ord a => [a] -> Int -> Property
