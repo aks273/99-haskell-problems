@@ -22,6 +22,8 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 - QuickCheck
+- random
+- containers
 
 ghc-options:
 - -Wall
@@ -59,7 +61,7 @@ library:
   - Q20
   - Q21
   - Q22
-  - Lib
+  - Q23
 
 
 executables:
@@ -84,3 +86,5 @@ tests:
     dependencies:
     - 99hs
     - QuickCheck
+    - random
+    - containers
