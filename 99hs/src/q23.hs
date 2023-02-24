@@ -12,8 +12,8 @@ rndSelect xs n
     | n < 0         = error "Cannot pick a negative indexed number from the list!"
     | n == 0        = []
     | otherwise     =
-        let (index, _)    = (randomR (0, (length xs) - 1) (mkStdGen n))
-            el              = xs !! index
+        let (index, _)  = (randomR (0, (length xs) - 1) (mkStdGen n))
+            elem        = xs !! index
         in [ el ] ++ (filter (\x -> x /= el) xs) `rndSelect` (n - 1)
 
 prop_rndSelect :: Ord a => [a] -> Int -> Property
