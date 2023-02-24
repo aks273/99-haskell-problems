@@ -26,6 +26,6 @@ combinatoricsChoose n r
 
 prop_combinations :: Int -> [a] -> Property
 prop_combinations r xs =
-    -- constraining length < 20 because factorial 21 is negative
+    -- constraining length < 20 because factorial 21 suffers from integer underflow
     length xs > r && length xs < 20 ==>
     length (combinations r xs) == (length xs) `combinatoricsChoose` r
