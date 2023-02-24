@@ -61,7 +61,7 @@ library:
   - Q23
   - Q24
   - Q25
-
+  - Q26
 
 executables:
   99hs-exe:

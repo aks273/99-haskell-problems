@@ -4,6 +4,7 @@ import Q1 (prop_myLast)
 import Q2 (prop_myButLast)
 import Q10_13 (prop_lengthEncode)
 import Q23 (prop_rndSelect)
+import Q26 (prop_combinations)
 
 main :: IO ()
 main = do
@@ -26,5 +27,10 @@ main = do
     quickCheck (prop_rndSelect :: [Int] -> Int -> Property)
     quickCheck (prop_rndSelect :: String -> Int -> Property)
     quickCheck (prop_rndSelect :: [String] -> Int -> Property)
+
+    quickCheck (prop_combinations :: Int -> [Int] -> Property)
+    quickCheck (prop_combinations :: Int -> String -> Property)
+    quickCheck (prop_combinations :: Int -> [String] -> Property)
+
 
     putStrLn "tests done!"
