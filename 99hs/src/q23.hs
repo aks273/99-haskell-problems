@@ -17,8 +17,7 @@ rndSelect xs n
         in [ el ] ++ (filter (\x -> x /= el) xs) `rndSelect` (n - 1)
 
 prop_rndSelect :: Ord a => [a] -> Int -> Property
-prop_rndSelect xs n
-    | otherwise =
+prop_rndSelect xs n =
         (n > 0 && length uniqueXs >= n) ==>
         (length . myPack) rands == length rands
     where
